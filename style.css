@@ -1,0 +1,171 @@
+/*  box-sizing:         https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+html {
+    box-sizing: border-box;
+    height: 99vh;
+}
+
+/*  display:            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout 
+    justify-content:    https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content
+    align-items:        https://developer.mozilla.org/en-US/docs/Web/CSS/align-items */
+body {
+    height: 99vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    background-color: #221C35; 
+}
+
+/* || chat window ----------------------------------------------*/
+
+/*  flex flow:      https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow 
+    box shadow:     https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
+.chat-window-background {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    width: 100%;
+    max-width: 65%;
+    background: #343546;
+    box-shadow: 0 0px 100px 0px #BB29BB;
+}
+
+/*  padding https://developer.mozilla.org/en-US/docs/Web/CSS/padding */
+.chat-window-header {
+    display: flex;
+    justify-content: left;
+    font-size: 10px;
+    color: white;
+    padding: 5px;
+}
+
+/*  flex:       https://developer.mozilla.org/en-US/docs/Web/CSS/flex 
+    overflow-y: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-y*/
+.chat-window {
+    overflow-y: auto;
+    flex: 1;
+    padding: 20px;
+}
+
+/* || messages ----------------------------------------------*/
+
+.message {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.temp-message{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+/* border-radius:  https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
+.message-bubble {
+    max-width: 500px;
+    border-radius: 10px;
+    padding: 15px;
+    background: #ff69b4;
+    color: #2E1A47;
+}
+
+.message-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.message-info-username {
+    margin-right: 60px;
+    font-weight: bold;
+}
+
+.message-info-timestamp {
+    font-size: 0.7em;
+}
+
+/* flex-direction:     https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction */
+.right-message {
+    flex-direction: row-reverse;
+}
+
+/* no comma between classes indicates css to be applied where both occur together */
+.right-message .message-bubble {
+    background: #7800CF;
+    color: #f8d4fa;
+}
+
+/* || input form ----------------------------------------------*/
+
+.input-form {
+    display: flex;
+    padding: 20px;
+    background: #343546;
+}
+
+/* here, asterisk is used to select all 'children' of parent */
+.input-form * {
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1em;
+}
+
+.text-input {
+    flex: 1;
+    background: #f5f5fc;
+    font-size: 15px;
+}
+
+/* 'send' button changes change when user hovers over mouse button */
+.send-button {
+    margin-left: 20px;
+    background: #7800CF;
+    color: #f8d4fa;     
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: 0.20s;
+}
+
+/* :hover   https://developer.mozilla.org/en-US/docs/Web/CSS/:hover */
+.send-button:hover {
+    background: #FB48C4;
+}
+
+/* || animations ----------------------------------------------*/
+
+/* 'flash' animation that executes on submit event 
+   credit: https://www.w3schools.com/cssref/tryit.asp?filename=trycss_anim_box-shadow */
+.flash {
+    animation: mymove 1s;
+    animation-iteration-count: 1;
+}
+  
+@keyframes mymove {
+    5% {box-shadow: 0px 0px 70px 20px #BB29BB;}
+}
+
+/* ellipses animation credit: 'thetallweeks' src: https://stackoverflow.com/questions/13014808/is-there-anyway-to-animate-an-ellipsis-with-css-animations */
+.typing:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 20px;    
+  }
+}

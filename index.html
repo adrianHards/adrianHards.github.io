@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>UWotsApp</title>
+    <meta charset="utf-8"> 
+
+    <!--sets initial zoom level when page first loads-->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet"> 
+
+    <!--'rel; specifies relationship of provided link-->
+    <link type="text/css" href="style.css" rel="stylesheet"> 
+    <audio id="notification-sound" src="https://www.myinstants.com/media/sounds/discord-notification.mp3" preload="auto"></audio>
+  </head>
+
+  <body>
+
+    <section class="chat-window-background">
+      <header class="chat-window-header">
+        <div class="header-title">
+          UWotsApp v1.0
+        </div>
+      </header>
+    
+      <main class="chat-window"></main>
+
+      <section>
+        <form class="input-form">
+          <input type="text" class="text-input" placeholder="New Message">
+          <button type="submit" class="send-button">Send</button>
+        </form>
+      </section>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+  </body>
+
+</html>
