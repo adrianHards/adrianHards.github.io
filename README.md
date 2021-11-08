@@ -1,10 +1,13 @@
 # UWotsApp
 
-'UWotsApp' was submitted in application to Codeworks' bootcamp. 
+'UWotsApp' is a simple chat application submitted in application to Codeworks' bootcamp. 
 
 ## Requirements
 
-Features to be included: \* auto-scrolling; \* auto-generated messages in response to user submissions; and \* the date and time each message was sent.
+Features to be included: 
+\* auto-scrolling;
+\* auto-generated messages in response to user submissions, and;
+\* the date and time each message was sent.
 
 ## Unresolved Bugs
 
