@@ -1,6 +1,6 @@
 /* 
 
-unresolved bugs/improvements:
+unresolved bugs/suggested improvements:
 
 1.  stop additional typing animations while current animation is ongoing; see: https://stackoverflow.com/questions/35928912/jquery-multiple-clicks-wait-until-user-stops-clicking
 2.  have user select their name.
@@ -8,7 +8,7 @@ unresolved bugs/improvements:
 
 */
 
-// || variables ----------------------------------------------
+// ||| variables ----------------------------------------------
 
 // temporary HTML for 'typing' animation
 const tempHTML = 
@@ -41,7 +41,7 @@ let responses = [
     "I can't seem to get the notification sound to execute for my initial message 🤔"
 ];
 
-// || functions ----------------------------------------------
+// ||| functions ----------------------------------------------
 
 // pick random response from array of responses
 function RandomResponse() {
@@ -138,7 +138,7 @@ function AutoMessage() {
       }, 4000); 
 };
 
-// || jQuery ----------------------------------------------
+// ||| jQuery ----------------------------------------------
 
 // execute after initial page load
 $(document).ready(() => {
@@ -158,8 +158,9 @@ $('form').on('submit', event => {
     // prevent page refresh.
     event.preventDefault(); 
   
+    // prevent submit if user text is empty or contains only whitespaces
     let text = (document.querySelector(".text-input")).value
-    if (!text) return;
+    if (!text.trim()) return; // console.log(!text.trim()) would return true if 'text' was empty or contained only white spaces
 
     // adds user text to <main> id=chat-window </main> using AddMessage()
     AddMessage("Codeworks", "right", text);
@@ -171,3 +172,19 @@ $('form').on('submit', event => {
     const form = document.querySelector("form");
     form.reset();  
 });
+
+/* original jQuery solution:
+
+$('form').on('submit', function(event) {
+  event.preventDefault();                         // prevent page refresh
+
+  let $userInput = $(this).find("#user-message"); // 'this' refers to DOM element that is the source of the event; $(this) is a jQuery wrapper around that element that allows use of jQuery methods
+  let userInput = $userInput.val();               // saves value of $userInput (which, because it a jQuery derived variable, is prefixed with a $) 
+  
+  setTimeout('<p>').text(userInput)               // adds value of userInput to <p>
+  .addClass("input")                              // adds class to identify user input from response for css
+  .appendTo("#user-messages")                       
+  pageScroll();                                   // call pageScroll function
+});
+
+*/
