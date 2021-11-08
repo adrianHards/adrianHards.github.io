@@ -5,9 +5,9 @@
 ## Requirements
 
 Features to be included: 
-\* auto-scrolling;
-\* auto-generated messages in response to user submissions, and;
-\* the date and time each message was sent.
+* auto-scrolling;
+* auto-generated messages in response to user submissions, and;
+* the date and time each message was sent.
 
 ## Unresolved Bugs
 
