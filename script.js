@@ -1,13 +1,3 @@
-/* 
-
-unresolved bugs/suggested improvements:
-
-1.  stop additional typing animations while current animation is ongoing; see: https://stackoverflow.com/questions/35928912/jquery-multiple-clicks-wait-until-user-stops-clicking
-2.  have user select their name.
-3.  have 'input-area' flash each time user submits a message (currently .flash reset is delayed by Timeout in AutoMessage() so doesn't execute on each submit event)
-
-*/
-
 // ||| variables ----------------------------------------------
 
 // temporary HTML for 'typing' animation
@@ -172,19 +162,3 @@ $('form').on('submit', event => {
     const form = document.querySelector("form");
     form.reset();  
 });
-
-/* original jQuery solution:
-
-$('form').on('submit', function(event) {
-  event.preventDefault();                         // prevent page refresh
-
-  let $userInput = $(this).find("#user-message"); // 'this' refers to DOM element that is the source of the event; $(this) is a jQuery wrapper around that element that allows use of jQuery methods
-  let userInput = $userInput.val();               // saves value of $userInput (which, because it a jQuery derived variable, is prefixed with a $) 
-  
-  setTimeout('<p>').text(userInput)               // adds value of userInput to <p>
-  .addClass("input")                              // adds class to identify user input from response for css
-  .appendTo("#user-messages")                       
-  pageScroll();                                   // call pageScroll function
-});
-
-*/
