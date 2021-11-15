@@ -1,6 +1,6 @@
 # UWotsApp
 
-'UWotsApp' is a simple chat application submitted in application to Codeworks' bootcamp. 
+'UWotsApp' is a simple chat application submitted in application to Codeworks.
 
 ## Requirements
 
@@ -11,5 +11,5 @@ Features to be included:
 
 ## Unresolved Bugs
 
-* additional 'typing' animations while current animation is ongoing
-* input area 'flash' is unable to execute on each submit event as a result Timeout()
+* additional 'typing' animations while current animation is ongoing;
+* input area 'flash' is unable to execute on each submit event.
