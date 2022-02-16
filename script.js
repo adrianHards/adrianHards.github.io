@@ -153,7 +153,7 @@ $('form').on('submit', event => {
     if (!text.trim()) return; // console.log(!text.trim()) would return true if 'text' was empty or contained only white spaces
 
     // adds user text to <main> id=chat-window </main> using AddMessage()
-    AddMessage("Codeworks", "right", text);
+    AddMessage("Anony", "right", text);
   
     // executes automated response
     AutoMessage();
