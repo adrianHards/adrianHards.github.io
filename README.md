@@ -2,9 +2,8 @@
 
 'UWotsApp' is a simple chat application submitted in application to Codeworks.
 
-## Requirements
+## Features
 
-Features to be included: 
 * auto-scrolling;
 * auto-generated messages in response to user submissions, and;
 * the date and time each message was sent.
