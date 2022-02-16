@@ -1,6 +1,6 @@
 # UWotsApp
 
-'UWotsApp' is a simple chat application submitted in application to Codeworks.
+'UWotsApp' is a simple chat application. 
 
 ## Features
 
