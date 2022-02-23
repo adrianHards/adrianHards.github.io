@@ -2,6 +2,8 @@
 
 'UWotsApp' is a simple chat application. 
 
+Please visit [adrianhards.github.io](https://adrianhards.github.io/) to see it in operation!
+
 ## Features
 
 * auto-scrolling;
