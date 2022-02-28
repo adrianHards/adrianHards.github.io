@@ -26,7 +26,7 @@ body {
     flex-flow: column wrap;
     height: 100%;
     width: 100%;
-    max-width: 65%;
+    max-width: 75%;
     background: #343546;
     box-shadow: 0 0px 100px 0px #BB29BB;
 }
