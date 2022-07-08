@@ -14,3 +14,7 @@ Please visit [adrianhards.github.io](https://adrianhards.github.io/) to see it i
 
 * additional 'typing' animations while current animation is ongoing;
 * input area 'flash' is unable to execute on each submit event.
+
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=adrianHards/adrianHards.github.io" id="counter">
+</p>
